@@ -12,8 +12,8 @@ home.get('/', async (ctx, next) => {
     // `;
     //   ctx.state.html = html;
     //   await next();
-    let title = 'my index';
-    await ctx.render('index', {
+    let title = 'Index';
+    await ctx.render('Index', {
         title,
     });
 });

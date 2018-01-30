@@ -36,11 +36,10 @@ app.use(bodyParser());
 
 // 配置静态资源加载中间件
 app.use(convert(koaStatic(
-    path.join(__dirname, './../static/images')
+    path.join(__dirname, './../static')
 )));
 
 // 配置服务端模板渲染引擎中间件
-console.log(path.join(__dirname, './../static/html'));
 app.use(views(path.join(__dirname, './../static/html'), {
     extension: 'ejs'
 }));
