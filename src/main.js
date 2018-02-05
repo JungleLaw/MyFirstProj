@@ -13,15 +13,6 @@ const routers = require('./routers/index');
 
 const app = new Koa();
 
-// session存储配置
-const sessionMysqlConfig = {
-    host: config.dev.database.host,
-    database: config.dev.database.database,
-    user: config.dev.database.name,
-    password: config.dev.database.password,
-    port: config.dev.database.port
-};
-
 // 配置session中间件
 app.use(session({
     key: 'USER_SID',

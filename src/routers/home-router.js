@@ -2,7 +2,7 @@ const router = require('koa-router');
 
 let home = new router();
 
-home.get('/', async (ctx, next) => {
+home.get('', async (ctx, next) => {
     console.log('home get');
     //   let html = `
     //   <ul>
@@ -17,7 +17,7 @@ home.get('/', async (ctx, next) => {
         title,
     });
 });
-home.get('home', async (ctx, next) => {
+home.get('/home', async (ctx, next) => {
     console.log('home get');
     let html = `
     <ul>
