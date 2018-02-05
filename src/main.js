@@ -25,7 +25,7 @@ const sessionMysqlConfig = {
 // 配置session中间件
 app.use(session({
     key: 'USER_SID',
-    store: new MysqlStore(sessionMysqlConfig)
+    store: new MysqlStore(config.dev.database)
 }));
 
 // 配置控制台日志中间件
